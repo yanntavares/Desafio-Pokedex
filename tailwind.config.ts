@@ -1,4 +1,4 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from "tailwindcss";
 
 export default {
   content: [
@@ -8,6 +8,9 @@ export default {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        "stripped-pattern" : "repeating-linear-gradient(45deg, #e5e7eb, #e5e7eb 10px, #f3f4f6 10px, #f3f4f6 20px)",
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
@@ -15,4 +18,4 @@ export default {
     },
   },
   plugins: [],
-} satisfies Config
+} satisfies Config;
