@@ -1,13 +1,11 @@
 export default function VitrineLayout({
-    children,
+  children,
 }: Readonly<{
-    children: React.ReactNode
+  children: React.ReactNode;
 }>) {
-    return (
-        <html lang='pt-BR'>
-            <div className="bg-stripped-pattern min-h-screen bg-fixed px-20">
-                {children}
-            </div>
-        </html>
-    )
+  return (
+    <div className="bg-stripped-pattern min-h-screen bg-fixed px-20">
+      {children}
+    </div>
+  );
 }

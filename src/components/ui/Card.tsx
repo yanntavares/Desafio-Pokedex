@@ -1,5 +1,4 @@
 import { Button } from "./Button"
-import Image from "next/image"
 
 type TaskProps = {
     title: string,
@@ -17,7 +16,7 @@ export function Card( { title, imageSource } : TaskProps ) {
                 { title }
             </h2>
             
-            <Image src={imageSource} alt={title} className={`pb-4`}/>
+            <img src={imageSource} alt={title} className={`pb-4`}/>
             
             <Button label="Details" variant='primary'></Button>
         </div>
