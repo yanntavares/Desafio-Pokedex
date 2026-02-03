@@ -5,6 +5,8 @@ export interface Pokemon {
     sprites: {
         front_default: string;
     }
+    height: number;
+    weight: number;
 }
 
 export interface GetPokemonDTO {
@@ -17,8 +19,21 @@ export interface CreatePokemonDTO {
     imageUrl: string;
 }
 
-export async function getPokemons(): Promise<Pokemon[]> {
-    const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=151');
+export async function getPokemons(page: number = 1, limit: number=18): Promise<Pokemon[]> {
+    const totalKanto = 151;
+    const offset = (page - 1) * limit;
+
+    if (offset >= 151) return [];
+
+    const adjustedLimit = (offset + limit) > totalKanto ? (totalKanto - offset) : limit;
+
+    const response = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=${adjustedLimit}&offset=${offset}`, { 
+        cache: 'no-store',
+        headers: {
+            'Accept': 'application/json'
+        }
+    });
+
     const data: GetPokemonDTO = await response.json();
     const pokemonDetails = await Promise.all(
         data.results.map(async (pokemon: { url: string }) => {
@@ -27,4 +42,12 @@ export async function getPokemons(): Promise<Pokemon[]> {
         })
     );
     return pokemonDetails;
+}
+
+export async function getPokemonDetails(name: string): Promise<Pokemon> {
+    const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`, {
+        cache: 'force-cache'
+    });
+    if (!response.ok) throw new Error('Failed to fetch pokemon details');
+    return response.json();
 }

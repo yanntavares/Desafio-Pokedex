@@ -1,9 +1,9 @@
 import { Button } from "./Button"
+import Link from "next/link"
 
 type TaskProps = {
     title: string,
     imageSource: string,
-
 }
 
 export function Card( { title, imageSource } : TaskProps ) { 
@@ -18,7 +18,10 @@ export function Card( { title, imageSource } : TaskProps ) {
             
             <img src={imageSource} alt={title} className={`pb-4`}/>
             
-            <Button label="Details" variant='primary'></Button>
+            <Link href={`/vitrine/${title.toLowerCase()}`}>
+                <Button label="Details" variant='primary'></Button>
+            </Link>
+            
         </div>
     )
 }
