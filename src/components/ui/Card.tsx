@@ -11,7 +11,7 @@ export function Card( { title, imageSource } : TaskProps ) {
         <div 
             className={`w-48 h-auto bg-[#FAFAFA] border-2 border-[#B3A125] rounded-lg  p-6 overflow-hidden flex flex-col items-center`}>
             <h2 
-                className="font-semibold text-2xl text-[#3B4CCA] truncate"
+                className="font-semibold text-xl text-[#3B4CCA] truncate px-8"
             >
                 { title }
             </h2>
