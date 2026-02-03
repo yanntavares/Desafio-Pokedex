@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import { Merriweather } from 'next/font/google';
 
 export const metadata: Metadata = {
     title: 'PokePet',
@@ -12,6 +13,12 @@ export const metadata: Metadata = {
     abstract: 'Vitrine de Pokemons',
 }
 
+const merriweather = Merriweather({
+  subsets: ['latin'],
+  weight: ['300', '400', '700', '900'],
+  variable: '--font-merriweather',
+});
+
 export default function RootLayout({
     children,
 }: Readonly<{
@@ -19,7 +26,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang='pt-BR'>
-            <body className=''>
+            <body className={`${merriweather.variable}`}>
                 {children}
             </body>
         </html>
