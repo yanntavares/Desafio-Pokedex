@@ -23,7 +23,7 @@ Novamente no terminal, rode o programa via comando:
 
 > `npm run dev`
 
-Por fim, acesse o projeto em seu [LocalHost](localhost:3000)
+Por fim, acesse o projeto em seu [LocalHost](http://localhost:3000)
 
 > [!NOTE]
 > Ou você pode acessar diretamente pelo Vercel: [PokePet](vercel-desafio-pokedex.vercel.app) 
