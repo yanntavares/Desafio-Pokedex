@@ -33,7 +33,9 @@ export default async function PokemonPage({ params }: PokemonPageProps) {
             <div className="flex gap-6 mt-6 bg-white p-4 rounded-2xl shadow-sm border border-gray-100">
               <div className="text-center border-r pr-6">
                 <p className="text-xs text-gray-400 uppercase">Height</p>
-                <p className="font-bold text-[#3B4CCA]">{pokemon.height / 10}m</p>
+                <p className="font-bold text-[#3B4CCA]">
+                  {pokemon.height / 10}m
+                </p>
               </div>
               <div className="text-center border-r pr-6">
                 <p className="text-xs text-gray-400 uppercase">Weight</p>
@@ -103,5 +105,4 @@ export default async function PokemonPage({ params }: PokemonPageProps) {
   } catch {
     notFound();
   }
-  
 }

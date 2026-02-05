@@ -20,6 +20,9 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontSize: {
+        tiny: ['0.625rem', { lineHeight: '1.1' }],
+      },
     },
   },
   plugins: [],
