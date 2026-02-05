@@ -8,15 +8,20 @@ O projeto foi desenvolvido com as tecnologias **React** e **Next.js** para uma a
 A prototipação da Landing Page foi feita pelo [Figma](https://www.figma.com/design/3rMXD12QBbEsO9SWGhvJxJ/Prototipa%C3%A7%C3%A3o---Pokedex?node-id=1-152&t=GjqA3REGFd1LvF3N-1) para melhor organização de ideias do design e norteamento na hora da implementação.
 
 ### Instruções 
-
-Primeiro, é necessário possuir o [Node](https://nodejs.org/pt-br) instalado em sua máquina e abrir o repositório em sua IDE, com o seguinte comando:  
+Como a PokéAPI não requer chave de acesso, apenas é necessário possuir o [Node](https://nodejs.org/pt-br) instalado em sua máquina e que executar corretamente no terminal de sua IDE.
+Primeiro, é preciso clonar o repositório em sua IDE, com o seguinte comando:  
 
 > `git clone https://github.com/yanntavares/Desafio-Pokedex.git`
 
-Em seguida, no terminal de sua IDE, instale as bibliotecas necessárias através do comando:  
+Em seguida, no terminal de sua IDE, instale as dependências através do comando:  
 
 > `npm install`
 
-E, por último, novamente no terminal, rode o programa via comando:  
+Novamente no terminal, rode o programa via comando:  
 
 > `npm run dev`
+
+Por fim, acesse o projeto em seu (LocalHost)[http:localhost:3000)
+
+> [!NOTE]
+> Ou você pode acessar diretamente pelo Vercel: [PokePet](vercel-desafio-pokedex.vercel.app) 
