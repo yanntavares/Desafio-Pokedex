@@ -27,5 +27,3 @@ Por fim, acesse o projeto em seu [LocalHost](http://localhost:3000)
 
 > [!NOTE]
 > Ou você pode acessar diretamente pelo Vercel: [PokePet](vercel-desafio-pokedex.vercel.app) 
-
-teste de commit 
